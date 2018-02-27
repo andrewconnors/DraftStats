@@ -24,7 +24,7 @@ class DraftPositionSpider(scrapy.Spider):
         'GP': Series(games_played), 'Amateur Team': Series(amateur_team)}
         hockeydf = DataFrame(draftdata)
 
-        hockeydf.to_csv('./DraftData/draftdata-' + str(response.meta['year']) + '.csv')
+        hockeydf.to_csv('./DraftData/draftdata.csv', mode='a')
         # with open('referenceurls.txt', 'a') as f:
         #     for name in playerNames:
         #         f.write(name + '\n')

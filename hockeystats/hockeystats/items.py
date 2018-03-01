@@ -8,7 +8,7 @@
 import scrapy
 
 
-class HockeyreferenceItem(scrapy.Item):
+class HockeystatsItem(scrapy.Item):
     # define the fields for your item here like:
     # name = scrapy.Field()
     pass

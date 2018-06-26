@@ -20,6 +20,7 @@ class DraftPositionSpider(scrapy.Spider):
         games_played = response.css('td[data-stat="games_played"]::text').extract()
         amateur_team = response.css('td[data-stat="amateur_team"]::text').extract()
 
+
         draftdata = {'Year': response.meta['year'], 'Name': Series(player_names), 'Overall Pick': Series(overall_ranking),
         'GP': Series(games_played), 'Amateur Team': Series(amateur_team)}
 
